@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealDB</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <!-- navbar -->
+        <div class="navbar bg-base-100 font-bold px-12 my-6">
+            <div class="navbar-start">
+              <a href="index.html" class=""><img src="images/tasty_HUT.png" alt=""></a>
+            </div>
+            <div class="navbar-end">
+              <a class="btn btn-warning font-bold">Sign Up</a>
+            </div>
+          </div>
+          <!-- header images -->
+          <div class="header-bg-img h-[650px] flex items-center">
+            <div class="text-center w-full px-4 md:px-0">
+                <h1 class="lg:w-[45%] md:w-[65%] mb-4 mx-auto text-white text-6xl font-bold">Taste Our Delicious Best Foods</h1>
+                <p class="text-white mb-10 lg:w-[50%] md:w-[70%] mx-auto ">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.</p>
+                <div class="relative mb-20 lg:w-[50%] md:w -[70%] mx-auto">
+                    <input id="search-meal" type="text" placeholder="Search any Food" class="input input-bordered w-full pr-16" /> 
+                    <button onclick="searchMeal();"  class="btn btn-warning absolute top-0 right-0 rounded-l-none px-12 font-bold">Search</button>
+                </div>
+            </div>
+          </div>
+    </header>
+    <!-- main -->
+    <main>
+        <!-- food section -->
+        <section class="px-20 mt-16" id="meals-section">
+            <h2 class="text-center font-bold text-4xl mb-8">Your Favorite Food</h2>
+            <h3 id="meal-not-found" class="hidden text-3xl mb-12 text-center font-bold text-red-400">Search meal not found !!!</h3>
+            <div id="meals-container" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+            </div>
+            <!-- Meal Details with modal -->
+            <input type="checkbox" id="mealDetails" class="modal-toggle" />
+            <div class="modal">
+            <div class="modal-box relative">
+                <label for="mealDetails" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                <h3 id="meal-name" class="font-bold py-5 border-b text-2xl"></h3>
+                <img id="meal-image" class="w-full h-[250px] md:h-[320px] rounded" src="" alt="">
+                <div class="font-bold space-y-3 mt-5">
+                    <p>Category: <span id="meal-category" class="font-normal"></span></p>
+                    <p>Area: <span id="meal-area" class="font-normal"></span></p>
+                    <p>Instructions: <span id="meal-instruction" class="font-normal"></span></p>
+                    <p>Youtube: <a id="meal-link" href="" class="font-normal"></a></p>
+                </div>
+            </div>
+            </div>
+            <div class="flex justify-center">
+                <button class="btn btn-warning font-bold">Show All</button>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer text-gray-600 font-semibold text-lg bg-orange-300/10 px-20 mt-24 py-28 text-base-content">
+        <div>
+            <span class="uppercase text-[#403F3F] mb-5 text-xl font-bold">Services</span> 
+            <a class="link link-hover">Branding</a> 
+            <a class="link link-hover">Design</a> 
+            <a class="link link-hover">Marketing</a> 
+            <a class="link link-hover">Advertisement</a>
+        </div> 
+        <div>
+            <span class="uppercase text-[#403F3F] mb-5 text-xl font-bold">Company</span> 
+            <a class="link link-hover">About us</a> 
+            <a class="link link-hover">Contact</a> 
+            <a class="link link-hover">Jobs</a> 
+            <a class="link link-hover">Press kit</a>
+        </div> 
+        <div>
+            <span class="uppercase text-[#403F3F] mb-5 text-xl font-bold">Legal</span> 
+            <a class="link link-hover">Terms of use</a> 
+            <a class="link link-hover">Privacy policy</a> 
+            <a class="link link-hover">Cookie policy</a>
+        </div> 
+        <div>
+            <span class="uppercase text-[#403F3F] mb-5 text-xl font-bold">Newsletter</span> 
+            <div class="form-control w-80">
+            <label class="label">
+                <span class="label-text text-lg text-gray-600">Enter your email address</span>
+            </label> 
+            <div class="relative">
+                <input type="email" placeholder="username@site.com" class="input input-bordered w-full pr-16" /> 
+                <button class="btn btn-warning absolute top-0 right-0 rounded-l-none font-bold">Subscribe</button>
+            </div>
+            </div>
+        </div>
+        </footer>
+    <!-- script file -->
+    <script defer src="js/meals.js"></script>
+</body>
+</html>

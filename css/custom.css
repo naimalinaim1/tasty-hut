@@ -1,0 +1,6 @@
+/* header background image */
+.header-bg-img {
+    background-image: url('../images/banner_1.png');
+    background-position: center;
+    filter: grayscale(5%);
+}
